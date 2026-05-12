@@ -19,7 +19,7 @@ const jobs = [
     company: 'TANDEM Kommunikation GmbH',
     period: 'Juli 2016 - Feb. 2019',
     duration: '2 Jahre und 8 Monate',
-    role: 'Technische Realisierung / e-Commerce / Webentwickler',
+    role: 'Technische Realisierung / E-Commerce / Webentwickler',
     type: 'Angestellt',
     mark: 'TK',
   },
