@@ -235,7 +235,7 @@ function ContactBox() {
         <span>Kontakt</span>
         <h2>Fragen?</h2>
         <p>
-          Erreichbar für technische Abstimmung und fachlichen Austausch.
+         Schreibt mir eine Email!
         </p>
         <strong>kontakt [at] da-zi [dot] de</strong>
       </div>
