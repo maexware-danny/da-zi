@@ -233,9 +233,9 @@ function ContactBox() {
     <section className={styles.contactBox}>
       <div>
         <span>Kontakt</span>
-        <h2>Projektanfrage oder Austausch?</h2>
+        <h2>Fragen?</h2>
         <p>
-          Erreichbar für Projektanfragen, technische Abstimmung und fachlichen Austausch.
+          Erreichbar für technische Abstimmung und fachlichen Austausch.
         </p>
         <strong>kontakt [at] da-zi [dot] de</strong>
       </div>
