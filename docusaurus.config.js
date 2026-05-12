@@ -48,10 +48,26 @@ const config = {
           label: 'About',
           position: 'right',
         },
+        {
+          to: '/impressum',
+          label: 'Impressum',
+          position: 'right',
+        },
       ],
     },
     footer: {
       style: 'dark',
+      links: [
+        {
+          title: 'Rechtliches',
+          items: [
+            {
+              label: 'Impressum',
+              to: '/impressum',
+            },
+          ],
+        },
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} Danny Zimmer.`,
     },
   },

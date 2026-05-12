@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import SafeMailLink from '../components/SafeMailLink';
 import styles from './about.module.css';
 
 const jobs = [
@@ -127,14 +128,9 @@ const skillGroups = [
       'Frontend Entwicklung',
       'Responsive Webdesign',
       'HTML',
-      'HTML5',
       'CSS3',
       'Less',
       'Smarty',
-      'Web template system',
-      'Bootstrap',
-      'Webdesign',
-      'Photoshop',
     ],
   },
   {
@@ -233,11 +229,6 @@ function JobItem({job}) {
 }
 
 function ContactBox() {
-  function handleMailClick() {
-    const mailbox = ['kontakt', 'da-zi.de'];
-    window.location.href = `mailto:${mailbox.join('@')}`;
-  }
-
   return (
     <section className={styles.contactBox}>
       <div>
@@ -248,9 +239,9 @@ function ContactBox() {
         </p>
         <strong>kontakt [at] da-zi [dot] de</strong>
       </div>
-      <button className={styles.contactButton} onClick={handleMailClick} type="button">
+      <SafeMailLink className={styles.contactButton}>
         Mail schreiben
-      </button>
+      </SafeMailLink>
     </section>
   );
 }
