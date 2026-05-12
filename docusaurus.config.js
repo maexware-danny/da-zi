@@ -2,9 +2,9 @@
 
 const config = {
   title: 'About Me',
-  tagline: 'Webentwickler fuer e-Commerce Projekte',
+  tagline: 'Webentwickler für E-Commerce-Projekte',
   favicon: 'img/aboutme-picture.jpg',
-  url: 'https://example.com',
+  url: 'https://da-zi.de',
   baseUrl: '/',
   organizationName: 'danny-zimmer',
   projectName: 'about-me',
@@ -51,7 +51,7 @@ const config = {
       ],
     },
     footer: {
-      style: 'light',
+      style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} Danny Zimmer.`,
     },
   },

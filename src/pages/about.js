@@ -7,7 +7,7 @@ import styles from './about.module.css';
 const jobs = [
   {
     company: 'maexware solutions GmbH',
-    period: 'seit Maerz 2019',
+    period: 'seit März 2019',
     duration: '7 Jahre und 3 Monate',
     dynamicStart: {year: 2019, month: 2},
     role: 'Webentwickler',
@@ -25,7 +25,7 @@ const jobs = [
   },
   {
     company: 'tp-werbeagentur',
-    period: 'Maerz 2016 - Juni 2016',
+    period: 'März 2016 - Juni 2016',
     duration: '4 Monate',
     role: 'Webentwickler',
     type: 'Angestellt',
@@ -58,14 +58,14 @@ const jobs = [
   },
   {
     company: 'Commodule',
-    period: 'Juni 2011 - Maerz 2013',
+    period: 'Juni 2011 - März 2013',
     duration: '1 Jahr und 10 Monate',
     role: 'Webentwickler',
     type: 'Angestellt',
     mark: 'CO',
   },
   {
-    company: 'Moebel-Schau Norsingen GmbH & Co',
+    company: 'Möbel-Schau Norsingen GmbH & Co',
     period: 'Aug. 2007 - Juli 2010',
     duration: '3 Jahre',
     role: 'Auszubildender',
@@ -78,8 +78,8 @@ const jobs = [
 const stats = [
   ['Name', 'Danny Zimmer'],
   ['Aktuelle Position', 'maexware solutions GmbH'],
-  ['Fokus', 'Webentwicklung, e-Commerce, OXID, Shopware, O3'],
-  ['Generator', 'Docusaurus'],
+  ['Fokus', 'Webentwicklung, E-Commerce, OXID, Shopware, O3'],
+  ['Erstellt mit', 'Docusaurus'],
   ['GitHub', 'maexware-danny'],
 ];
 
@@ -152,7 +152,7 @@ const skillGroups = [
     ],
   },
   {
-    title: 'AI-gestuetzte Entwicklung',
+    title: 'AI-gestützte Entwicklung',
     skills: [
       'Codex',
       'Claude',
@@ -199,7 +199,7 @@ function useCurrentDuration(start, fallback) {
 
 function CompanyMark({name, mark}) {
   return (
-    <div className={styles.companyMark} aria-label={`${name} Logo`}>
+    <div className={styles.companyMark} aria-label={`${name} Kürzel`}>
       <span>{mark}</span>
     </div>
   );
@@ -224,11 +224,34 @@ function JobItem({job}) {
           <summary>Weitere Details</summary>
           <p>
             {job.details ||
-              `${job.role} bei ${job.company}. Zeitraum: ${job.period}. Beschaeftigungsart: ${job.type}.`}
+              `${job.role} bei ${job.company}. Zeitraum: ${job.period}. Beschäftigungsart: ${job.type}.`}
           </p>
         </details>
       </div>
     </article>
+  );
+}
+
+function ContactBox() {
+  function handleMailClick() {
+    const mailbox = ['kontakt', 'da-zi.de'];
+    window.location.href = `mailto:${mailbox.join('@')}`;
+  }
+
+  return (
+    <section className={styles.contactBox}>
+      <div>
+        <span>Kontakt</span>
+        <h2>Projektanfrage oder Austausch?</h2>
+        <p>
+          Erreichbar für Projektanfragen, technische Abstimmung und fachlichen Austausch.
+        </p>
+        <strong>kontakt [at] da-zi [dot] de</strong>
+      </div>
+      <button className={styles.contactButton} onClick={handleMailClick} type="button">
+        Mail schreiben
+      </button>
+    </section>
   );
 }
 
@@ -239,7 +262,7 @@ function About() {
   return (
     <Layout
       title="About me"
-      description="Webentwickler Profil mit Erfahrung in e-Commerce, OXID und Shopware">
+      description="Webentwickler Profil mit Erfahrung in E-Commerce, OXID und Shopware">
       <main className={styles.page}>
         <section className={styles.intro}>
           <div className="container">
@@ -247,27 +270,27 @@ function About() {
               <div className={styles.introCopy}>
                 <p className={styles.kicker}>About me</p>
                 <p className={styles.name}>Danny Zimmer</p>
-                <h1>Webentwickler für e-Commerce Projekte</h1>
+                <h1>Webentwickler für E-Commerce-Projekte</h1>
                 <p className={styles.lead}>
                   Technische Realisierung, Shopentwicklung, Modulentwicklung und Templating
-                  fuer OXID, Shopware und individuelle Webprojekte.
+                  für OXID, Shopware und individuelle Webprojekte.
                 </p>
                 <div className={styles.heroLinks}>
                   <a href="https://github.com/maexware-danny/" rel="noopener noreferrer" target="_blank">
                     GitHub
                   </a>
-                  <span>Generated with Docusaurus</span>
+                  <span>Erstellt mit Docusaurus</span>
                 </div>
               </div>
               <div className={styles.profileBox}>
                 <img src={profileImage} alt="Danny Zimmer" className={styles.profileImage} />
                 <span>Profil</span>
                 <strong>Danny Zimmer</strong>
-                <small>Webentwickler fuer e-Commerce, OXID, Shopware und O3</small>
+                <small>Webentwickler für E-Commerce, OXID, Shopware und O3</small>
                 <hr className={styles.profileDivider} />
                 <span>Aktuell</span>
                 <strong>maexware solutions GmbH</strong>
-                <small>Webentwickler, seit Maerz 2019</small>
+                <small>Webentwickler, seit März 2019</small>
                 <small>{currentDuration}</small>
               </div>
             </div>
@@ -293,6 +316,8 @@ function About() {
               ))}
             </div>
 
+            <ContactBox />
+
             <div className={styles.sectionHeader}>
               <h2>Kenntnisse</h2>
             </div>
@@ -314,7 +339,7 @@ function About() {
 
             <div className={styles.sectionHeader}>
               <h2>Berufserfahrung</h2>
-              <span>Weniger anzeigen</span>
+              <span>{jobs.length} Stationen</span>
             </div>
 
             <div className={styles.timeline}>
